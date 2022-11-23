@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <title>Telemetry Iridium-3 mission</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap" rel="stylesheet">
+</head>
+
+<body class="body">
+<div class="timer-style"><div class="skew-time"><div class="time">T+</div></div><div class="time-launch" id="timer">00:00:00</div></div>
+<div>
+    <div class="container button-center">
+        <h1 class="stage">Stage 1</h1>
+        <h1 class="stage__data">Speed</h1>
+        <div class="container_speed">
+            <span id="speedElement">0</span>
+            <h5 class="speed_kmh">km/h</h5>
+        </div>
+        <canvas id="circle-speed-current" width=225 height=225></canvas>
+        <canvas id="circle-speed" width=225 height=225></canvas>
+
+    </div>
+    <div class="container button-center">
+        <h1 class="telemetry">Telemetry</h1>
+        <h1 class="stage__data">Altitude</h1>
+        <div class="container_speed">
+            <span id="altitude">0</span>
+            <canvas id="circle-altitude" width=225 height=225></canvas>
+            <canvas id="circle-altitude-current" width=225 height=225></canvas>
+            <h5 class="speed_kmh">km</h5>
+        </div>
+    </div>
+</div>
+<img src="iridium_mission.png" alt="SpaceX Iridium-3 Mission logo" class="img__falcon"/>
+<div>
+    <div id="messages"></div>
+</div>
+<div>
+    <button id="start" class="button">Start Launch</button>
+    <button id="abort" class="button">Abort Launch</button>
+    <button id="reset" class="button">Reset Launch</button>
+</div>
+</body>
+<script type="module" src="telemetry.js"></script>
+<script type="module" src="data.js"></script>
+</html>
